@@ -35,3 +35,13 @@ WHERE creditcard.ExpYear=2007
 GROUP BY creditcard.ExpMonth 
 ORDER BY ilosc_kart desc
 LIMIT 3;
+
+7. W którym roku wygasa najmniej kart w miesiącach letnich?
+SELECT ExpYear 
+FROM creditcard 
+WHERE ExpMonth REGEXP "^[6-8]$"
+GROUP BY ExpYear
+ORDER BY COUNT(*) ASC
+LIMIT 1;
+
+8. Utwórz zestawienie typów kart wraz z ilośćiami zkaładając, że wygasają w miesiącach nieparzystych.
