@@ -1,0 +1,12 @@
+_ -> dowlny jeden znak (używany przy Like)
+
+REGEXP -> operator używany podczas wykonywania dopasowań do wzroców regularnych
+^ -> początek ciągu 
+$ -> koniec ciągu ("d$" - d na końcu wyrazu)
+. -> dowolny znak
+.{6} -> dowolny znak 6 razy
+.{8,12} -> dowolny znak od 8 do 12 (bez dogiej liczby jedzie poprostu do końca
+\d -> dowolna cyfra
+\D -> dowolna nie cyfra
+\s -> dowolny znak
+[a-d] -> od jednej litery do drugiej
