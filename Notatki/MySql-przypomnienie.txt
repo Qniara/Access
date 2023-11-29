@@ -1,0 +1,11 @@
+SELECT FROM - wybierz z bazy danych
+INSERT INTO - włóż do bazy danych
+UPDATE - zaktualizuj wartość
+AUTO_INCREMENT - wykonuje funkcje automatycznie
+SET-ustaw cos na cos
+UPDATE klienci SET nazwisko="Psikuta" WHERE idklienta="4" - ustawia nazwisko osobnika z id=4 na psikuta
+UPDATE klienci SET idklienta=1 WHERE idklienta="4" - blad bedzie bo autoincrement jest
+UPDATE ksiazki SET cena=ROUND(cena*1.1) - ustawia cena ksiazek na +10%
+UPDATE ksiazki SET cena=cena-10 ORDER BY cena desc LIMIT 1 - obnia cene najdroższej ksiazki o 10
+INSERT INTO klienci VALUES(NULL, "Franciszek", "Janowski", "Chorzoof") - dodaje goscia do klientow
+INSERT INTO ksiazki (idksiazki, nazwiskoautora, tytul) VALUES (NULL, "Grebosz", "Symfonia C++") - dodaje ksiazke ale nie podaje imienia autora i ceny
