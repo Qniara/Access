@@ -45,3 +45,6 @@ ORDER BY COUNT(*) ASC
 LIMIT 1;
 
 8. Utwórz zestawienie typów kart wraz z ilośćiami zkaładając, że wygasają w miesiącach nieparzystych.
+SELECT CardType, COUNT(*) FROM creditcard 
+WHERE ExpMonth%2=1
+GROUP BY CardType;
