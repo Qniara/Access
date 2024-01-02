@@ -24,3 +24,6 @@ informacji w jego rekordzie jako pracownika.
 
 Zad.3
 Agentka Marianne Wier chciałaby zarezerwować kilka wystepow dla siebie utworz wiec dla niej nowy rekord klienta przez skopiowanie odpowiednich pol z tabeli agentow.
+
+Zad.4
+Dodaj "new age" do listy stylow muzycznych
