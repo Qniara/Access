@@ -5,7 +5,8 @@ korzystając z informacji zapisanych w rekordzie Johna.
 Zad.2
 Jeden z naszych pracowników, Tim Smith, chciałby zacząć u nas studiować. Utwórz nowy rekord studenta na podstawie 
 informacji w jego rekordzie jako pracownika.
-
+INSERT INTO studenci SELECT (SELECT MAX(IDStudenta)+1 FROM studenci), pracownicy.ImiePracownika, pracownicy.NazwiskoPracownika, pracownicy.AdresPracownika, pracownicy.MiastoPracownika, pracownicy.StanZamPracownika, 
+pracownicy.KodPocztowyPracownika, pracownicy.NumKierPracownika, pracownicy.TelefonPracownika, '1991-03-18', 'M', NULL , 2 from pracownicy where pracownicy.IDPracownika=98021;
 
 Zad.3
 Agentka Marianne Wier chciałaby zarezerwować kilka wystepow dla siebie utworz wiec dla niej nowy rekord klienta przez skopiowanie odpowiednich pol z tabeli agentow.
