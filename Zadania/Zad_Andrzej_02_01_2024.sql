@@ -10,6 +10,8 @@ pracownicy.KodPocztowyPracownika, pracownicy.NumKierPracownika, pracownicy.Telef
 
 Zad.3
 Agentka Marianne Wier chciałaby zarezerwować kilka wystepow dla siebie utworz wiec dla niej nowy rekord klienta przez skopiowanie odpowiednich pol z tabeli agentow.
-
+INSERT INTO klienci SELECT (SELECT MAX(klienci.IDKlienta)+1 FROM klienci), agenci.ImieAgenta, agenci.NazwiskoAgenta, agenci.AdresAgenta, agenci.MiastoAgenta, agenci.StanZamAgenta, agenci.KodPocztowyAgenta, 
+  agenci.KodPocztowyAgenta FROM agenci WHERE agenci.IDAgenta=5;
+  
 Zad.4
 Dodaj "new age" do listy stylow muzycznych
