@@ -15,3 +15,4 @@ INSERT INTO klienci SELECT (SELECT MAX(klienci.IDKlienta)+1 FROM klienci), agenc
   
 Zad.4
 Dodaj "new age" do listy stylow muzycznych
+INSERT INTO style_muzyczne SELECT (SELECT MAX(style_muzyczne.IDStylu)+1 FROM style_muzyczne), 'new age';
