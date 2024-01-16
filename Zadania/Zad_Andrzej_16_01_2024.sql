@@ -2,3 +2,7 @@
 Select NumerZamowienia, DataWysylki, klienci.NazwiskoKlienta 
 from zamowienia JOIN klienci ON zamowienia.IDKlienta=klienci.IDKlienta 
 where zamowienia.DataWysylki='2017-10-03';
+
+select klienci.ImieKlienta, klienci.NazwiskoKlienta, 
+  (select max(DatazZamowienia) from zamowienia where zamowienia.IDKlienta=klienci.IDKlienta) as dataostzam 
+from klienci;
