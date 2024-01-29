@@ -1,0 +1,23 @@
+Private Sub moja_procedura()
+din baza as Dao.Database
+Dim rs as Dao.Recordset 'zamiana tabeli w model obiektowy (każdy wiersz z tabeli jest jedną "klatką filmu")'
+Dim odp as integer
+set baza = CurrentDb
+set rs = baza.OpenRecords("Klienci")
+rs.MoveFirst()
+do while not rs.EOF 'EOF = end of file'
+   odp = MsgBox("Nazwisko Klienta: " & rs.Fields("NazwiskoKlienta" & vbcrlf _
+   "Imie klienta: ") & rs.Fields("ImieKlienta", VbOKCancel, "Pupa kod Vba")
+   if odp=VbCancel Then
+	Exit Sub
+   End if
+   rs.MoveNext
+Loop
+
+End Sub
+
+Private Sub Polecenie_Click()
+   Call moja_procedura
+End Sub
+
+' ' <- komentarz
