@@ -9,3 +9,10 @@ wyswietl agentow ktorzy dotychczas nie podpisali kontraktu z zadnym wykonawca (n
 select agenci.ImieAgenta, agenci.NazwiskoAgenta 
 from agenci left outer join imprezy on agenci.IDAgenta=imprezy.IDAgenta 
 where imprezy.NumerImprezy is null;
+
+/*Zad.3
+Wyswietl wszystkich kleintw agencji i date ostatniej rezerwacji każdego z niech*/
+select klienci.ImieKlienta, klienci.NazwiskoKlienta, imprezy.DzienRozpoczecia 
+from klienci inner join imprezy on klienci.IDKlienta=imprezy.IDKlienta 
+group by klienci.IDKlienta
+order by imprezy.DzienRozpoczecia desc;
