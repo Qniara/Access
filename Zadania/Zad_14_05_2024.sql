@@ -18,3 +18,10 @@ WHERE IDWykonawcy IN (
         WHERE NazwiskoKlienta IN ('Berg', 'Hallmark')
     )
 );
+
+/*Zad.3*/
+SELECT przepisy.NazwaPrzepisu, skladniki.NazwaSkladnika 
+FROM przepisy
+JOIN skladniki_przepisow ON przepisy.IDPrzepisu = skladniki_przepisow.IDPrzepisu
+JOIN skladniki ON skladniki_przepisow.IDSkladnika = skladniki.IDSkladnika
+ORDER BY przepisy.NazwaPrzepisu ASC;
